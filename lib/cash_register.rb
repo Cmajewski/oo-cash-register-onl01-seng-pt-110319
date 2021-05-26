@@ -14,6 +14,7 @@ class CashRegister
      if @discount
        @total*=@discount
       puts "After the discount, the total comes to #{@total}"
+    end
 
   end
 
