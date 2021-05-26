@@ -1,7 +1,7 @@
 require "pry"
 
 class CashRegister
-  attr_accessor :total, :discount, :items
+  attr_accessor :total, :discount, :items, :last_transaction
   def initialize(employee_discount=nil)
     @total=0
     @discount=employee_discount
@@ -13,6 +13,7 @@ class CashRegister
     quantity.times do
     self.items<<title
     end
+    self.last_transaction=quantity*amount
   end
 
   def apply_discount
@@ -25,6 +26,7 @@ class CashRegister
   end
 
   def void_last_transaction
+    self.total
   end
 
 end
