@@ -13,7 +13,9 @@ class CashRegister
   def apply_discount
      if @discount
        @total*=@discount
-      puts "After the discount, the total comes to #{@total}"
+      "After the discount, the total comes to #{@total}"
+    else
+      "There is no discount to apply "
     end
 
   end
